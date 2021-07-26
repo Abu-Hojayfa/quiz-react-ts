@@ -18,7 +18,7 @@ function App() {
   const [userData, setUserData] = useState({} as AppProps);
 
   const [isFormFill, setIsFormFill] = useState(false)
-  const [isWindowLoad, setWindowLoad] = useState(true)
+  const [isWindowLoad, setWindowLoad] = useState(false)
 
   const { register, handleSubmit, } = useForm();
   const onSubmit = (data: AppProps) => {
@@ -93,9 +93,9 @@ function App() {
         : 
       
             <div className=" position-absolute top-50 start-50 translate-middle">
-            <img className="img-fluid" src={LoadImg} alt="" />
-            <h2 className="text-center loading">
-              Loading ...
+              <img className="img-fluid" src={LoadImg} alt="" />
+              <h2 className="text-center loading">
+                Loading ...
             </h2>
           </div>
         }
