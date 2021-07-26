@@ -1,12 +1,73 @@
-.App{
-  background-image: url(../src/image/bgImg.jpg);
-  min-height: 100vh;
+.App {
+  padding-top: 12rem;
+  background-image: url(../src/image/bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  min-height: 100vh;
+  background-size: 100% 100%;
 }
 
-.loading{
+.loading {
   font-size: 3rem;
+}
+
+.introForm{
+  width: 45%;
+  padding: 2rem 4rem 3.5rem 4rem;
+  border: 2px solid #269FC2;
+  border-radius: 10px;
+  background-image: url(../src/image/formBg.jpg);
+}
+
+.introForm label{
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+}
+
+option{
+  font-size: 1.1rem;
+}
+
+input[type=submit]{
+  margin-top: 3rem !important;
+}
+
+@media (max-width: 1350px) {
+  .introForm{
+  width: 50%;
+  }
+  .App{
+    padding-top: 10rem;
+  }
+}
+@media (max-width: 1175px) {
+  .introForm{
+  width: 60%;
+  }
+  .App{
+    padding-top: 8rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .introForm{
+  width: 75%;
+  }
+  .App{
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 650px) {
+  .introForm{
+  width: 90%;
+  padding: 2rem;
+
+  }
+  input[type=submit]{
+    width: 50% !important;
+    
+  }
+  .introPic{
+    width: 35% !important;
+  }
 }
