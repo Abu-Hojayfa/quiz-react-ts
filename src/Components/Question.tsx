@@ -43,8 +43,6 @@ const Question = ({name, category, difficulty, amount}:userData) => {
     .then(data => setQuestions(data.results));
   }, [name, category, difficulty, amount])
 
-  console.log(questions)
-
   return (
     <div>
       <div className="introForm m-auto">
