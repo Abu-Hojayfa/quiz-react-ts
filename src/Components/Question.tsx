@@ -1,9 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 
-const Question = () => {
+interface userData {
+
+    name: string;
+    category: string;
+    difficulty: string;
+    amount: string;
+
+}
+
+const Question = ({name, category, difficulty, amount}:userData) => {
+
+  console.log(name)
+
   return (
     <div>
-      <h1>Okay</h1>
+      <h1>{name}</h1>
     </div>
   );
 };

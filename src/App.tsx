@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { useForm } from 'react-hook-form';
@@ -24,7 +24,6 @@ function App() {
   const onSubmit = (data: AppProps) => {
     setUserData(data);
     setIsFormFill(true);
-    console.log(userData)
   };
 
   window.onload = () => {
@@ -88,7 +87,7 @@ function App() {
       
               <input className="btn btn-success btn-lg w-25 m-2" type="submit" />
             </form> : 
-            <Question />}
+            <Question name={userData.name} difficulty={userData.difficulty} amount={userData.amount} category={userData.category} />}
           </div>
         : 
       
