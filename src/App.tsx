@@ -27,7 +27,7 @@ function App() {
   };
 
   window.onload = () => {
-    setWindowLoad(false)
+    setWindowLoad(true)
   }
 
 
