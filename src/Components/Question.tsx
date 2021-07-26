@@ -26,7 +26,7 @@ interface allQuestions {
   question: string;
   category: string;
   correct_answers: string;
-  incorrect_answers: string;
+  incorrect_answers: [];
   difficulty: string;
 } 
 
@@ -35,6 +35,7 @@ const Question = ({name, category, difficulty, amount}:userData) => {
   const [isCorrectAns, setIsCorrectAns] = useState({ca:0})
   const [isNegAns, setIsNegAns] = useState({na:0})
   const [questions, setQuestions] = useState<allQuestions[]>([])
+  const [mcqs, setMcqs] = useState({})
 
   useEffect(()=>{
     fetch(`https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`)
@@ -59,7 +60,9 @@ const Question = ({name, category, difficulty, amount}:userData) => {
           {
             questions.map((question)=>
               <SwiperSlide>
+                
                 <h1>{question.question}</h1>
+
               </SwiperSlide>
             )
           }
